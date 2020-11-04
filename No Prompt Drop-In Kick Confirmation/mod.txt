@@ -7,11 +7,13 @@
     "version" : "1.0",
 	"color" : "0.0 1 0.0",
 	"updates" : [
-        {
-            "revision" : 1,
-            "identifier" : "NoPromptDropInKickConfirmation"
-        }
-    ],
+		{
+			"identifier" : "NoPromptDropInKickConfirmation",
+			"host" : {
+				"meta" : "https://github.com/powware/pd2-no-prompt-drop-in-kick-confirmation/releases/download/refs%2Fheads%2Fmaster/meta.json"
+			}
+		}
+	],
 	"hooks" : [
 		{ 	
 			"hook_id" : "lib/managers/votemanager", 

@@ -1,0 +1,8 @@
+[
+    {
+        "ident": "NoPromptDropInKickConfirmation",
+        "hash": "%HASH%",
+        "patchnotes_url": "https://github.com/powware/pd2-no-prompt-drop-in-kick-confirmation",
+        "download_url": "https://github.com/powware/pd2-no-prompt-drop-in-kick-confirmation/releases/download/refs%2Fheads%2Fmaster/NoPromptDropInKickConfirmation.zip"
+    }
+]
