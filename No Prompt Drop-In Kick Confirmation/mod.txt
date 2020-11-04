@@ -6,6 +6,7 @@
     "contact" : "https://github.com/powware",
     "version" : "1.0",
 	"color" : "0.0 1 0.0",
+	"image": "kick.png",
 	"updates" : [
 		{
 			"identifier" : "NoPromptDropInKickConfirmation",
