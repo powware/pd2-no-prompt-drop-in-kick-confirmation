@@ -1,7 +1,13 @@
 NoPromptDropInKickConfirmation = NoPromptDropInKickConfirmation or {}
 
 function NoPromptDropInKickConfirmation.Hooks()
-	if RequiredScript == "lib/managers/votemanager" then
+	if RequiredScript == "lib/managers/hud/hudwaitinglegend" then
+		function HUDWaitingLegend:kick()
+			if self._current_peer then
+				managers.vote:message_host_kick_no_confirmation(self._current_peer)
+			end
+		end
+	elseif RequiredScript == "lib/managers/votemanager" then
 		function VoteManager:message_host_kick_no_confirmation(peer)
 			if peer then
 				managers.network:session():send_to_peers("kick_peer", peer:id(), 0)
@@ -9,14 +15,6 @@ function NoPromptDropInKickConfirmation.Hooks()
 			end
 
 			managers.menu:back(true)
-		end
-	elseif RequiredScript == "lib/managers/menu/ingamewaitinggui" then
-		function IngameWaitingGui:kick()
-			if not self._peer then
-				return
-			end
-
-			managers.vote:message_host_kick_no_confirmation(self._peer)
 		end
 	end
 end
